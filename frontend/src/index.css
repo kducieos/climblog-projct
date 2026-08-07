@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ClimbLog Design System - Cute & Playful Climbing App */
+
+@layer base {
+  :root {
+    /* Kawaii Pastel Color Palette */
+    --background: 340 40% 98%;
+    --foreground: 340 15% 25%;
+
+    --card: 340 60% 97%;
+    --card-foreground: 340 15% 30%;
+
+    --popover: 340 60% 97%;
+    --popover-foreground: 340 15% 30%;
+
+    /* Blush Pink Primary */
+    --primary: 340 75% 75%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Soft Lavender Secondary */
+    --secondary: 280 45% 85%;
+    --secondary-foreground: 280 20% 30%;
+
+    /* Mint Accent */
+    --accent: 140 40% 80%;
+    --accent-foreground: 140 30% 25%;
+
+    /* Peach Muted */
+    --muted: 25 50% 90%;
+    --muted-foreground: 25 15% 45%;
+
+    /* Soft Coral Destructive */
+    --destructive: 15 75% 70%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Subtle Borders */
+    --border: 340 30% 90%;
+    --input: 340 30% 92%;
+    --ring: 340 75% 75%;
+
+    /* Custom ClimbLog Colors */
+    --mountain-base: 200 25% 85%;
+    --mountain-peak: 200 30% 75%;
+    --mountain-shadow: 200 20% 70%;
+    
+    --achievement-gold: 45 100% 75%;
+    --achievement-silver: 200 15% 80%;
+    --achievement-bronze: 25 60% 70%;
+    
+    --success: 140 50% 70%;
+    --warning: 45 97% 60%;
+    --info: 220 60% 75%;
+
+    /* Gradients */
+    --gradient-mountain: linear-gradient(135deg, hsl(var(--mountain-base)), hsl(var(--mountain-peak)));
+    --gradient-sunset: linear-gradient(135deg, hsl(var(--primary)), hsl(25 70% 80%));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(340 50% 95%));
+    --gradient-achievement: linear-gradient(135deg, hsl(var(--achievement-gold)), hsl(45 80% 65%));
+
+    /* Kawaii Shadows */
+    --shadow-soft: 0 4px 20px hsl(340 30% 85% / 0.3);
+    --shadow-card: 0 8px 25px hsl(340 40% 80% / 0.25);
+    --shadow-float: 0 12px 35px hsl(340 50% 75% / 0.2);
+
+    /* Rounded Corners */
+    --radius: 1rem;
+    --radius-lg: 1.5rem;
+    --radius-xl: 2rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+  }
+
+  /* ✅ 背景仍然全宽铺满 */
+  main { 
+    @apply w-full;
+  }
+
+  /* ✅ 前景内容限制最大宽度 960px */
+  main .z-20 {
+    @apply w-full mx-auto px-4 sm:px-6 max-w-content;
+  }
+
+  /* ✅ 需要全宽的页面可以加 full-width 类 */
+  main .z-20.full-width {
+    @apply max-w-none px-0;
+  }
+
+  /* Kawaii Utility Classes */
+  .mountain-gradient {
+    background: var(--gradient-mountain);
+  }
+  
+  .sunset-gradient {
+    background: var(--gradient-sunset);
+  }
+  
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+  
+  .achievement-gradient {
+    background: var(--gradient-achievement);
+  }
+  
+  .shadow-kawaii {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-float {
+    box-shadow: var(--shadow-float);
+  }
+  
+  /* Cute Animations */
+  .bounce-gentle {
+    animation: bounce-gentle 2s ease-in-out infinite;
+  }
+  
+  .float-gentle {
+    animation: float-gentle 3s ease-in-out infinite;
+  }
+}
+
+@layer components {
+  /* Custom Button Variants */
+  .btn-kawaii {
+    @apply bg-primary text-primary-foreground rounded-full px-6 py-3 font-semibold shadow-card hover:shadow-float transition-all duration-300 hover:scale-105;
+  }
+  
+  .btn-mountain {
+    @apply mountain-gradient text-white rounded-full px-6 py-3 font-semibold shadow-card hover:shadow-float transition-all duration-300 hover:scale-105;
+  }
+  
+  .card-kawaii {
+    @apply card-gradient rounded-[var(--radius-lg)] p-6 shadow-card hover:shadow-float transition-all duration-300;
+  }
+}
+
+@keyframes bounce-gentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+}
+
+/* --- Swipe animations --- */
+@keyframes swipe-left {
+  to { transform: translateX(-120%) rotate(-12deg); opacity: 0; }
+}
+@keyframes swipe-right {
+  to { transform: translateX(120%) rotate(12deg); opacity: 0; }
+}
+@keyframes swipe-up {
+  to { transform: translateY(-120%) rotate(0deg); opacity: 0; }
+}
+
+.animate-swipe-left  { animation: swipe-left 0.3s ease-out forwards; }
+.animate-swipe-right { animation: swipe-right 0.3s ease-out forwards; }
+.animate-swipe-up    { animation: swipe-up 0.3s ease-out forwards; }
+
+/* 拖拽手感（可选，但强烈推荐） */
+.draggable-card {
+  will-change: transform;
+  transition: transform 0.25s ease;
+  touch-action: pan-y;    /* 允许竖向滚动，横向自己接管 */
+  cursor: grab;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.draggable-card.dragging {
+  transition: none;
+  cursor: grabbing;
+}
+
