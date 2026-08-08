@@ -26,6 +26,12 @@ It combines a React frontend, Firebase authentication and Firestore persistence,
 - **AI challenge generator** powered by Gemini, with a local fallback when the model is unavailable.
 - **Responsive UI** with desktop top navigation and mobile bottom navigation.
 
+## My Contributions
+
+This was a two-person course project. My main responsibility was the **frontend design and interaction implementation**, including the responsive page layouts, navigation flow, logbook interactions, camera/upload experience, challenge-card interactions, and profile dashboard UI.
+
+To keep the project workload balanced and the frontend/backend contract practical, I also assisted with parts of the backend design, especially around shaping the hold-detection API flow between the React client, FastAPI proxy, and Roboflow service.
+
 ## Tech Stack
 
 | Area | Technologies |
