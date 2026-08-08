@@ -226,6 +226,10 @@ Example response in `both` mode:
 - The Roboflow key is used only on the FastAPI server and should never be exposed in frontend environment variables.
 - CORS is currently open for development. For production, restrict it to the deployed frontend domain.
 
+## License
+
+This project is released under the MIT License.
+
 ## Course Context
 
 This project was originally built for **CS-E4400 Design of WWW Services D** at **Aalto University** in Autumn 2025. The repository has been polished as a portfolio/open-source project while keeping the course context minimal.
