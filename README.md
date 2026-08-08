@@ -4,6 +4,18 @@
 
 It combines a React frontend, Firebase authentication and Firestore persistence, a FastAPI proxy for computer vision inference, and Gemini-generated challenge cards into one interactive climbing companion.
 
+## Preview
+
+![ClimbLog home dashboard](docs/images/homepage-preview.png)
+
+| Logbook | AI Challenges |
+| --- | --- |
+| ![ClimbLog route logbook](docs/images/logbook-preview.png) | ![ClimbLog AI challenge cards](docs/images/challenge-preview.png) |
+
+| Hold Detection | Profile |
+| --- | --- |
+| ![ClimbLog hold detection result](docs/images/hold-detection-preview.png) | ![ClimbLog profile and achievements](docs/images/profile-preview.png) |
+
 ## Highlights
 
 - **Digital climbing logbook** with route grade, location, rating, notes, and date filters.
