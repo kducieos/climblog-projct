@@ -28,9 +28,19 @@ It combines a React frontend, Firebase authentication and Firestore persistence,
 
 ## My Contributions
 
-This was a two-person course project. My main responsibility was the **frontend design and interaction implementation**, including the responsive page layouts, navigation flow, logbook interactions, camera/upload experience, challenge-card interactions, and profile dashboard UI.
+This was a two-person course project with a frontend/backend split and shared API design.
 
-To keep the project workload balanced and the frontend/backend contract practical, I also assisted with parts of the backend design, especially around shaping the hold-detection API flow between the React client, FastAPI proxy, and Roboflow service.
+**Frontend - primary ownership**
+
+- Designed and implemented the responsive React/TypeScript UI for desktop and mobile, including the home dashboard, logbook, challenge cards, camera page, and profile views.
+- Built the camera and image-upload flow for hold detection, including mobile camera capture, image preview, upload state, confidence threshold control, and result modal.
+- Implemented the swipeable AI challenge-card interaction with pointer/touch gesture handling for skip, save, and start actions.
+- Built profile and dashboard statistics from Firestore route data, including streak calculation, favorite grade, total height, and achievement states.
+
+**Cross-cutting / backend collaboration**
+
+- Co-designed the `/detect` API contract between the React client, FastAPI proxy, and Roboflow inference service, including multipart upload shape, confidence/overlap parameters, and JSON/image response modes.
+- Helped define the data flow that keeps the Roboflow API key server-side while giving the frontend enough structured prediction data to render summaries and detection previews.
 
 ## Tech Stack
 
